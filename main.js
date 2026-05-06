@@ -78,15 +78,34 @@ document.addEventListener("DOMContentLoaded", async () => {
               Editar
             </button>
             <button
-              class="bg-red-300 rounded-lg py-2 px-4 hover:bg-red-600 hover:text-stone-100 cursor-pointer w-full md:w-42"
+              class="btn-eliminar bg-red-300 rounded-lg py-2 px-4 hover:bg-red-600 hover:text-stone-100 cursor-pointer w-full md:w-42"
             >
               Eliminar
             </button>
           </div>
         </div>
         `;
-
+        
     dataContainer.appendChild(card);
+
+    const btnEliminar = card.querySelector(".btn-eliminar");
+    
+    btnEliminar.addEventListener("click",() => {
+      deleteData(id);
+      
+    })
+    
+    
+    async function deleteData(id) {
+      const response = await fetch(`http://localhost:3000/malecon/${id}`, {
+        method: "DELETE",
+        
+      });
+    card.remove()
+   
+    };
+
+
     const btnEditar = card.querySelector("#btn-editar");
 
     btnEditar.addEventListener("click", () => {
@@ -107,22 +126,16 @@ btnSalir.addEventListener("click", () => {
 
 let nuevaDescripcion = document.querySelector(".descripcion-edit");
 let nuevaImagen = document.querySelector(".imagen-edit");
-let nombreEdit = document.querySelector(".nombre-edit");
-let apellidoEdit = document.querySelector(".apellido-edit");
-let fechaEdit = document.querySelector(".fecha-edit");
+  
+btnGuardar.addEventListener("click", () => patchData());
 
-btnGuardar.addEventListener("click", () => putData());
-
-async function putData() {
+async function patchData() {
   const response = await fetch(`http://localhost:3000/malecon/${cardId}`, {
-    method: "PUT",
+    method: "PATCH",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      name: nombreEdit.value,
-      lastname: apellidoEdit.value,
-      birthDate: fechaEdit.value,
       description: nuevaDescripcion.value,
       photo: nuevaImagen.value,
     }),
@@ -134,3 +147,5 @@ async function getData() {
   const data = await response.json();
   return data;
 }
+
+

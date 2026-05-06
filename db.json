@@ -4,18 +4,9 @@
       "name": "luis",
       "lastname": "diaz",
       "birthDate": "12-04-1987",
-      "description": "lucho lucho lucho",
-      "photo": "https://caracoltv.brightspotcdn.com/dims4/default/90afff3/2147483647/strip/true/crop/1280x720+0+0/resize/400x225!/quality/75/?url=https:%2F%2Fcaracol-brightspot.s3.us-west-2.amazonaws.com%2F9a%2Fa1%2Fae51e017460c9249e444b3848c12%2Fluis-diaz.jpg",
+      "description": "lucho juega hoy ",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPfJ6GPMr9fnlxRqwwXCbmOZMaXqZqbesCghiJHYp_FnnBnJH1vWQ4d3JjlT7AFx2NDT5LKREJv2YolqIQni-KR2c7RcWq07iyuXvPIA&s=10",
       "id": "GG001S"
-    },
-    {
-      "id": "GG002S",
-      "name": "Carlos",
-      "lastname": "Perez",
-      "birthDate": "12-03-1995",
-      "photo": "https://picsum.photos/seed/carlos/400/400",
-      "description": "Le gusta el baloncesto",
-      "color": "blue"
     },
     {
       "id": "GG003S",
@@ -25,15 +16,6 @@
       "photo": "https://picsum.photos/seed/ana/400/400",
       "description": "Amante de la lectura",
       "color": "rose"
-    },
-    {
-      "id": "GG004S",
-      "name": "Miguel",
-      "lastname": "Torres",
-      "birthDate": "10-01-1992",
-      "photo": "https://picsum.photos/seed/miguel/400/400",
-      "description": "Programador web",
-      "color": "indigo"
     },
     {
       "id": "GG005S",
@@ -54,11 +36,6 @@
       "color": "yellow"
     },
     {
-      "description": "bnbnbnbnb",
-      "photo": "https://images.pexels.com/photos/4636525/pexels-photo-4636525.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-      "id": "GG007S"
-    },
-    {
       "id": "GG008S",
       "name": "Andres",
       "lastname": "Morales",
@@ -75,31 +52,6 @@
       "photo": "https://picsum.photos/seed/valentina/400/400",
       "description": "Le gusta viajar",
       "color": "orange"
-    },
-    {
-      "id": "GG010S",
-      "name": "Diego",
-      "lastname": "Vargas",
-      "birthDate": "09-04-1994",
-      "photo": "https://picsum.photos/seed/diego/400/400",
-      "description": "Entrena en el gimnasio",
-      "color": "lime"
-    },
-    {
-      "name": "adf",
-      "lastname": "adfa",
-      "birthDate": "adfa",
-      "photo": "https://images.unsplash.com/photo-1689308271305-58e75832289b?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "afas",
-      "id": "HQXq18Z"
-    },
-    {
-      "name": "jffcf",
-      "lastname": "lkhjbj",
-      "birthDate": "iuhlhj",
-      "photo": "https://images.pexels.com/photos/4636525/pexels-photo-4636525.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-      "description": "jhjbhb ",
-      "id": "r1RgmNf0dW0"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
