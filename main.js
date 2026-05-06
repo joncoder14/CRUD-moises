@@ -17,7 +17,7 @@ btnCrear.addEventListener("click", () => {
 });
 
 btnMandar.addEventListener("click", () => {
-  postData()
+  postData();
 });
 
 async function postData() {
@@ -32,7 +32,7 @@ async function postData() {
         lastname: apellido.value,
         birthDate: fecha.value,
         photo: imagen.value,
-        description: descripcion.value
+        description: descripcion.value,
       }),
     });
     if (!response.ok) {
@@ -49,7 +49,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   data.forEach((element) => {
     const card = document.createElement("div");
-    const { name, lastname, photo, birthDate, description, color } = element;
+    const { id, name, lastname, photo, birthDate, description, color } =
+      element;
     card.innerHTML = `
         <div class="bg-${color ? color : "cyan"}-200 rounded-lg p-3 flex flex-col items-center">
           <h3 class="font-bold text-xl mb-2 uppercase">${name} ${lastname}</h3>
@@ -71,6 +72,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             class="flex w-full flex-col md:flex-row gap-2 justify-between mt-3"
           >
             <button
+              id = "btn-editar"
               class="bg-orange-300 rounded-lg py-2 px-4 hover:bg-orange-600 hover:text-stone-100 cursor-pointer w-full md:w-42"
             >
               Editar
@@ -83,9 +85,49 @@ document.addEventListener("DOMContentLoaded", async () => {
           </div>
         </div>
         `;
+
     dataContainer.appendChild(card);
+    const btnEditar = card.querySelector("#btn-editar");
+
+    btnEditar.addEventListener("click", () => {
+      cardId = element.id;
+      formEdit.style.display = "flex";
+    });
   });
 });
+let cardId = null;
+
+const formEdit = document.querySelector(".form-editar");
+const btnSalir = document.querySelector(".btn-salir");
+const btnGuardar = document.querySelector(".btn-guardar");
+
+btnSalir.addEventListener("click", () => {
+  formEdit.style.display = "none";
+});
+
+let nuevaDescripcion = document.querySelector(".descripcion-edit");
+let nuevaImagen = document.querySelector(".imagen-edit");
+let nombreEdit = document.querySelector(".nombre-edit");
+let apellidoEdit = document.querySelector(".apellido-edit");
+let fechaEdit = document.querySelector(".fecha-edit");
+
+btnGuardar.addEventListener("click", () => putData());
+
+async function putData() {
+  const response = await fetch(`http://localhost:3000/malecon/${cardId}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name: nombreEdit.value,
+      lastname: apellidoEdit.value,
+      birthDate: fechaEdit.value,
+      description: nuevaDescripcion.value,
+      photo: nuevaImagen.value,
+    }),
+  });
+}
 
 async function getData() {
   const response = await fetch("http://localhost:3000/malecon");

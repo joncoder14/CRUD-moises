@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Malecon</title>
     <!-- esto es cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
-    <link rel="stylesheet" href="style.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="p-3 bg-stone-200 shadow-lg shadow-zinc-200">
@@ -16,7 +15,7 @@
     <main class="mt-2 bg-gray-100 px-5 py-3 space-x-3 space-y-2 h-screen">
       <section id="buttons" class="grid grid-cols-1 md:grid-cols-3 space-y-2">
         <!-- este contenedor le agrego el form -->
-        <div class="grid grid-cols-4 space-x-3"> 
+        <div class="grid grid-cols-4 space-x-3">
           <div class="col-span-3">
             <input
               type="text"
@@ -33,21 +32,45 @@
           </div>
           <div class="formulario">
             <form action="">
-              <input class="nombre" type="text" placeholder="ingrese el nombre" required>
-              <input class="apellido" type="text" placeholder="ingrese el apellido" required>
-              <input class="fecha" type="text" placeholder="ingrese la fecha nacimiento" required>
-              <input class="descripcion" type="text" placeholder="ingrese una descripcion" required>
-              <input class="imagen" type="text" placeholder="ingrese la url imagen" required>
+              <input
+                class="nombre"
+                type="text"
+                placeholder="ingrese el nombre"
+                required
+              />
+              <input
+                class="apellido"
+                type="text"
+                placeholder="ingrese el apellido"
+                required
+              />
+              <input
+                class="fecha"
+                type="text"
+                placeholder="ingrese la fecha nacimiento"
+                required
+              />
+              <input
+                class="descripcion"
+                type="text"
+                placeholder="ingrese una descripcion"
+                required
+              />
+              <input
+                class="imagen"
+                type="text"
+                placeholder="ingrese la url imagen"
+                required
+              />
 
-              <button class="btn-mandar" type="submit"> Crear</button>
-              
+              <button class="btn-mandar" type="submit">Crear</button>
             </form>
           </div>
         </div>
         <div></div>
         <div class="flex justify-end">
-          <button 
-            id = "btn-crear"
+          <button
+            id="btn-crear"
             class="bg-emerald-300 rounded-lg py-2 px-4 hover:bg-emerald-600 hover:text-stone-100 cursor-pointer md:w-64 w-full"
           >
             Crear nuevo
@@ -58,7 +81,41 @@
         id="data"
         class="grid grid-cols-1 md:grid-cols-3 space-x-3 space-y-2"
       >
-        
+        <div class="form-editar">
+          <form action="">
+            <input
+              class="nombre-edit"
+              type="text"
+              placeholder="ingrese nombre"
+            />
+            <input
+              class="apellido-edit"
+              type="text"
+              placeholder="ingrese apellido"
+            />
+
+            <input
+              class="fecha-edit"
+              type="text"
+              placeholder="ingrese la fecha"
+            />
+
+            <input
+              class="imagen-edit"
+              type="text"
+              placeholder="ingrese nueva imagen"
+              required
+            />
+            <input
+              class="descripcion-edit"
+              type="text"
+              placeholder="ingrese nuevo descripcion"
+              required
+            />
+            <button class="btn-guardar" type="submit">guardar</button>
+            <button class="btn-salir" type="reset">salir</button>
+          </form>
+        </div>
       </section>
     </main>
     <script src="main.js"></script>

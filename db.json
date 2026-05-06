@@ -1,13 +1,12 @@
 {
   "malecon": [
     {
-      "id": "GG001S",
-      "name": "Luis",
-      "lastname": "Diaz",
-      "birthDate": "05-12-1997",
-      "photo": "https://estaticos.elcolombiano.com/binrepository/852x565/28c0/780d565/none/11101/XJXQ/whatsapp-image-2026-04-29-at-12-51-49-pm_50489386_20260429195753.jpg",
-      "description": "Juega fulbo",
-      "color": "emerald"
+      "name": "luis",
+      "lastname": "diaz",
+      "birthDate": "12-04-1987",
+      "description": "lucho lucho lucho",
+      "photo": "https://caracoltv.brightspotcdn.com/dims4/default/90afff3/2147483647/strip/true/crop/1280x720+0+0/resize/400x225!/quality/75/?url=https:%2F%2Fcaracol-brightspot.s3.us-west-2.amazonaws.com%2F9a%2Fa1%2Fae51e017460c9249e444b3848c12%2Fluis-diaz.jpg",
+      "id": "GG001S"
     },
     {
       "id": "GG002S",
@@ -55,13 +54,9 @@
       "color": "yellow"
     },
     {
-      "id": "GG007S",
-      "name": "Lucia",
-      "lastname": "Fernandez",
-      "birthDate": "14-02-1999",
-      "photo": "https://picsum.photos/seed/lucia/400/400",
-      "description": "Diseñadora gráfica",
-      "color": "pink"
+      "description": "bnbnbnbnb",
+      "photo": "https://images.pexels.com/photos/4636525/pexels-photo-4636525.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+      "id": "GG007S"
     },
     {
       "id": "GG008S",
@@ -97,6 +92,15 @@
       "photo": "https://images.unsplash.com/photo-1689308271305-58e75832289b?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "afas",
       "id": "HQXq18Z"
+    },
+    {
+      "name": "jffcf",
+      "lastname": "lkhjbj",
+      "birthDate": "iuhlhj",
+      "photo": "https://images.pexels.com/photos/4636525/pexels-photo-4636525.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+      "description": "jhjbhb ",
+      "id": "r1RgmNf0dW0"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
